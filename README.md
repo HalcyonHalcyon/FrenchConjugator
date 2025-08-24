@@ -7,7 +7,7 @@ Verb conjugations taken from reverso.net and wordreference.com
 # Attributes
 
 <ul>
-<li>[List of 100 Most Common French Verbs](https://www.linguasorb.com/french/verbs/most-common-verbs/)</li>
+<li><a href="https://www.linguasorb.com/french/verbs/most-common-verbs/">List of 100 Most Common French Verbs</a></li>
 </ul>
 
 # Vue 3 + TypeScript + Vite
