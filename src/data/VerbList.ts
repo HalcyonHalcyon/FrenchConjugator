@@ -1,5 +1,7 @@
 import { Verb } from '../models/Verb.ts';
 
+//100 most common French verbs
+//Note: None are reflexive
 new Verb('être',false,false,'to be','été'),
 new Verb('avoir',false,false,'to have','eu'),
 new Verb('pouvoir',false,false,'to be able to','pu'),
