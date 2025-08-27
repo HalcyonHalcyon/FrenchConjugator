@@ -1,22 +1,23 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
   <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <div>
     <h1>French Verb Conjugation Practice</h1>
     <h2>Verb to conjugate: </h2>
-    
+  <b-dropdown id="dropdown-1" text="Dropdown Button" class="m-md-2">
+    <b-dropdown-item>Présent</b-dropdown-item>
+    <b-dropdown-item>Futur Simple</b-dropdown-item>
+    <b-dropdown-item>Imparfait</b-dropdown-item>
+    <b-dropdown-item>Passé Composé</b-dropdown-item>
+    <b-dropdown-item>Futur Antérieur</b-dropdown-item>
+    <b-dropdown-item>Plus-que-parfait</b-dropdown-item>
+    <b-dropdown-item>Subjonctif</b-dropdown-item>
+    <b-dropdown-item>Conditionnel</b-dropdown-item>
+    <b-dropdown-item>Conditionnel passé</b-dropdown-item>
+    <b-dropdown-divider></b-dropdown-divider>
+  </b-dropdown>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style scoped>
