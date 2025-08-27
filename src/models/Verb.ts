@@ -1,5 +1,12 @@
 import { ref } from "vue";
 
+/*
+To do:
+- Implement conjugation method for regular verbs
+- Hardcode conjugations of irregular verbs
+- Design quiz mechanism on webpage
+*/
+
 type Tense =
   | 'present'
   | 'futur simple'
@@ -97,6 +104,6 @@ export class Verb {
 
   add(verb: Verb) {
     var newVerb = this.add(verb);
-    return new Verb(infinitive,this.regular,this.reflexive,this.English,this.participle,this.drmrspvandertramp)
+    return new Verb(infinitive,this.regular,this.reflexive,this.English,this.participle,this.drmrspvandertramp);
   }
 }
