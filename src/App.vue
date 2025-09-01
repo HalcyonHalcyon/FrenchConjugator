@@ -37,4 +37,8 @@
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
+
+h1 {
+  vertical-align: text-top;
+}
 </style>
