@@ -7,7 +7,7 @@
     <h2>Verb to conjugate: </h2>
   </div>
   <div>
-    <b-dropdown id="dropdown-1" text="Dropdown Button" class="m-md-2">
+    <b-dropdown id="tense" text="Dropdown Button" class="m-md-2">
       <b-dropdown-item>Présent</b-dropdown-item>
       <b-dropdown-item>Futur Simple</b-dropdown-item>
       <b-dropdown-item>Imparfait</b-dropdown-item>
