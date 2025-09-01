@@ -2,10 +2,11 @@
 </script>
 
 <template>
-  <div>
+  <!--<div>
     <h1>French Verb Conjugation Practice</h1>
     <h2>Tense to conjugate: </h2>
   </div>
+-->
   <!--
   <div>
     <b-dropdown id="tense" text="Dropdown Button" class="m-md-2">
