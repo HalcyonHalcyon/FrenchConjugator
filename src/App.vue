@@ -43,4 +43,9 @@ h1 {
   vertical-align: text-top;
   text-align: center;
 }
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
 </style>
