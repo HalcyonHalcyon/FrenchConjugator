@@ -41,5 +41,6 @@
 
 h1 {
   vertical-align: text-top;
+  text-align: center;
 }
 </style>
