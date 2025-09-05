@@ -1,4 +1,13 @@
-<script setup lang="ts">
+<script setup lang="ts",src="https://unpkg.com/vue@3">
+
+  const app = Vue.createApp({
+    methods: {
+      sayHello() {
+        alert("Hello from Vue!");
+      }
+    }
+  });
+  app.mount('#app');
 </script>
 
 <template>
@@ -32,12 +41,12 @@
   will-change: filter;
   transition: filter 300ms;
 }
-.logo:hover {
+/*.logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
-}
+}*/
 
 h1 {
   vertical-align: text-top;

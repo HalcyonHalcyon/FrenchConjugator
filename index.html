@@ -14,7 +14,7 @@
     </div>
     <div class="break"></div>
     <div>
-    <label for="tense"><h2>Choose a tense to conjugate: </h2></label>
+    <label for="tense"><h3>Choose a tense to conjugate: </h2></label>
     <select name="tense" id="tense">
       <optgroup label="Indicative - Simple">
         <option value="Présent">Présent</option>
@@ -35,8 +35,9 @@
       </optgroup>
     </select>
     </div>
+    <div></div>
     <div>
-      <button type="button">Start Quiz</button>
+      <button type="button" @click = "startQuiz">Start Quiz</button>
     </div>
   </body>
 </html>
