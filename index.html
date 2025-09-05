@@ -27,18 +27,33 @@
         <option value="Plus-que-parfait">Plus-que-parfait</option>
       </optgroup>
       <optgroup label="Subjunctive">
-        <option value="Subjonctif">Présent</option>
+        <option value="Subjonctif">Subjonctif présent</option>
       </optgroup>
       <optgroup label="Conditional">
-        <option value="Conditionnel">Présent</option>
-        <option value="Conditionnel passé">Passé</option>
+        <option value="Conditionnel">Conditionnel présent</option>
+        <option value="Conditionnel passé">Conditionnel passé</option>
       </optgroup>
     </select>
     </div>
     <div></div>
-    <br><br>
+    <br>
     <div>
       <button type="button" @click = "startQuiz">Start Quiz</button>
     </div>
+
+    <script>
+      const { createApp } = Vue;
+
+      createApp({
+        methods: {
+          startQuiz() {
+            alert("Quiz started!");
+            // Your quiz logic here
+
+          }
+        }
+      }).mount('#app');
+    </script>
+
   </body>
 </html>
