@@ -109,4 +109,13 @@ new Verb('tirer',true,false,'to pull','tiré');
 createApp(App).mount('#app');
 
 var verb1 = Verb.randomVerb();
+var verb2 = Verb.randomVerb();
+var verb3 = Verb.randomVerb();
+var verb4 = Verb.randomVerb();
+var verb5 = Verb.randomVerb();
+var verb6 = Verb.randomVerb();
+var verb7 = Verb.randomVerb();
+var verb8 = Verb.randomVerb();
+var verb9 = Verb.randomVerb();
+var verb10 = Verb.randomVerb();
 

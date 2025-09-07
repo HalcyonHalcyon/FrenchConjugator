@@ -102,8 +102,10 @@ export class Verb {
     return new Verb(infinitive,this.regular,this.reflexive,this.English,this.participle,this.drmrspvandertramp);
   }*/
 
-  randomVerb() {
-    const random = Math.floor(Math.random() * Verb.allVerbs.length);
-    return Verb.allVerbs[random];
+  static randomVerb(): Verb | undefined {
+    const list = Verb.allVerbs;
+    if (list.length === 0) return undefined;
+    const index = Math.floor(Math.random() * list.length);
+    return list[index];
   }
 }
