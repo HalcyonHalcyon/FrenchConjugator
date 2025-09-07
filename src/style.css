@@ -82,6 +82,11 @@ h1 {
   height: 0;
 }
 
+.question-box {
+  margin: 0 auto;
+  width: 400px;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
