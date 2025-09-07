@@ -56,6 +56,7 @@ const RESuffixes = {
 }
 
 export class Verb {
+  static allVerbs: Verb[] = [];
   infinitive: string;
   group: string;
   regular: boolean;
@@ -93,10 +94,16 @@ export class Verb {
       'conditionnel': [],
       'conditionnel passe': [],
     };
+    Verb.allVerbs.push(this);
   }
 
-  add(verb: Verb) {
+  /*add(verb: Verb) {
     var newVerb = this.add(verb);
     return new Verb(infinitive,this.regular,this.reflexive,this.English,this.participle,this.drmrspvandertramp);
+  }*/
+
+  randomVerb() {
+    const random = Math.floor(Math.random() * Verb.allVerbs.length);
+    return Verb.allVerbs[random];
   }
 }

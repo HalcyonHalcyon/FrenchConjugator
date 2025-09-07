@@ -1,11 +1,7 @@
 <script setup lang="ts",src="https://unpkg.com/vue@3">
 
   const app = Vue.createApp({
-    methods: {
-      sayHello() {
-        alert("Hello from Vue!");
-      }
-    }
+    methods: {}
   });
   app.mount('#app');
 </script>

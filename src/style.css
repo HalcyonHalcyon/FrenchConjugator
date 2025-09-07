@@ -69,10 +69,21 @@ input[type="button"] {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin: 10px 0px;
 }
 
 input[type="button"]:hover {
   border-color: #646cff;
+}
+
+input[type="text"] {
+  height: 20px;
+  padding: 8px 8px;
+  font-size: 14px;
+  line-height: 1.33333;
+  border-radius: 6px;
+  width: 400px;
+  margin: 5px 0px;
 }
 
 .card {

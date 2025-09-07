@@ -8,19 +8,33 @@
   </head>
   <body>
     <div id="app"></div>
-    <script type="module" src="/src/quiz.ts"></script>
+    <script type="module" src="/src/main.ts"></script>
     
     <div class="question-box">
         <form action="/action_page.php">
             <div class="question">
+                <h2>Question 1</h2>
                 <label for="q1">Tense: Présent <br>Verb: Manger <br>Subject: je</label><br>
-                <input type="text" id="q1" name="q1" value=""><br><br>
+                <input type="text" id="q1" name="q1" value=""><br>
+                <input type="button" value="Check">
+
+                <br><br>
+
             </div>
             <div class="question">
+                <h2>Question 2</h2>
                 <label for="q2">Tense: Présent <br>Verb: Manger <br>Subject: je</label><br>
-                <input type="text" id="q2" name="q2" value=""><br><br>
+                <input type="text" id="q2" name="q2" value=""><br>
+                <input type="button" value="Check">
+
+                <br><br>
             </div>
-            <input type="button" value="Submit">
+
+
+
+            <div>
+                <input type="button" value="Return to home page" onclick="window.location.href='index.html'">
+            </div>
         </form>
     </div>
     
