@@ -33,7 +33,10 @@ import { Verb } from './models/Verb'
   </div>
   <div></div>
   <br>
-  <div>
+  <!--<div>
     <button type="button" onclick="window.location.href='quiz.vue'">Start Quiz</button>
-  </div>
+  </div>-->
+    <router-link to="/quiz">
+      <button>Start Quiz</button>
+    </router-link>
 </template>

@@ -1,7 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import Home from '../Home.vue'
 import Quiz from '../Quiz.vue'
 
 const routes = [
+  { path: '/', component: Home },
   { path: '/quiz', component: Quiz },
 ]
 
