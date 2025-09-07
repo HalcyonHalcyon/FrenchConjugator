@@ -5,8 +5,8 @@ import { Verb } from './models/Verb'
 </script>
 
 <template>
-  <router-view />
-  <!--<div id="app"></div>
+  <div id="app"></div>
+  <!--<script type="module" src="/src/main.ts"></script>-->
   <div>
     <h1>French Verb Conjugation Practice</h1>
     <h4>Use the settings below to start a French conjugation practice quiz</h4>
@@ -35,23 +35,5 @@ import { Verb } from './models/Verb'
   <br>
   <div>
     <button type="button" onclick="window.location.href='quiz.vue'">Start Quiz</button>
-  </div>-->
+  </div>
 </template>
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-h1 {
-  vertical-align: text-top;
-  text-align: center;
-}
-
-.break {
-  flex-basis: 100%;
-  height: 0;
-}
-</style>
