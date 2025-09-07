@@ -6,7 +6,7 @@ import { Verb } from './models/Verb'
 
 <template>
   <div id="app"></div>
-  <script type="module" src="/src/main.ts"></script>
+  <!--<script type="module" src="/src/main.ts"></script>-->
   <div>
     <h1>French Verb Conjugation Practice</h1>
     <h4>Use the settings below to start a French conjugation practice quiz</h4>
