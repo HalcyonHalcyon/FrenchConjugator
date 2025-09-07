@@ -5,6 +5,7 @@ import { Verb } from './models/Verb'
 </script>
 
 <template>
+  <router-view />
   <div id="app"></div>
   <!--<script type="module" src="/src/main.ts"></script>-->
   <div>
