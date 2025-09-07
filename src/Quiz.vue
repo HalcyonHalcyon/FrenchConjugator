@@ -2,7 +2,10 @@
   <div>
     <p>{{ randomVerb?.infinitive || "No verb available" }}</p>
     <button @click="randomVerb = Verb.randomVerb()">Get New Verb</button>
-    <div class="question-box">
+    
+  </div>
+
+  <div class="question-box">
         <form action="/action_page.php">
             <div class="question">
                 <h2>Question 1</h2>
@@ -22,14 +25,11 @@
                 <br><br>
             </div>
 
-
-
             <div>
                 <input type="button" value="Return to home page" onclick="window.location.href='index.html'">
             </div>
         </form>
     </div>
-  </div>
 </template>
 
 <script setup lang="ts">
