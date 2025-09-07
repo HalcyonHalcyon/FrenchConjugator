@@ -1,12 +1,5 @@
 import { ref } from "vue";
 
-/*
-To do:
-- Implement conjugation method for regular verbs
-- Hardcode conjugations of irregular verbs
-- Design quiz mechanism on webpage
-*/
-
 type Tense =
   | 'present'
   | 'futur simple'
