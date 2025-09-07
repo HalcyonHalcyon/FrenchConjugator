@@ -1,5 +1,5 @@
 import { createApp } from 'vue';
-import { ref } from 'vue';
+import { ref, reactive } from 'vue';
 import './style.css';
 import App from './App.vue';
 
