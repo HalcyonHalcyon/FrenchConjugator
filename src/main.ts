@@ -2,6 +2,7 @@ import { createApp } from 'vue';
 import { ref, reactive } from 'vue';
 import './style.css';
 import App from './App.vue';
+import router from '/router';
 
 import { Verb } from './models/Verb.ts';
 

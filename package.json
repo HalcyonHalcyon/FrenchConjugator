@@ -12,6 +12,7 @@
     "prettier:write": "npm run prettier:base -- --write \"src/**/*.{ts,tsx}\""
   },
   "dependencies": {
+    "router": "^2.2.0",
     "vue": "^3.5.18",
     "vue-router": "^4.5.1"
   },

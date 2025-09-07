@@ -34,7 +34,7 @@ import { Verb } from './models/Verb'
   <div></div>
   <br>
   <div>
-    <button type="button" onclick="window.location.href='quiz.html'">Start Quiz</button>
+    <button type="button" onclick="window.location.href='quiz.vue'">Start Quiz</button>
   </div>
 </template>
 <style scoped>
