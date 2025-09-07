@@ -2,6 +2,33 @@
   <div>
     <p>{{ randomVerb?.infinitive || "No verb available" }}</p>
     <button @click="randomVerb = Verb.randomVerb()">Get New Verb</button>
+    <div class="question-box">
+        <form action="/action_page.php">
+            <div class="question">
+                <h2>Question 1</h2>
+                <label for="q1">Tense: Présent <br>Verb: Manger <br>Subject: je</label><br>
+                <input type="text" id="q1" name="q1" value=""><br>
+                <input type="button" value="Check">
+
+                <br><br>
+
+            </div>
+            <div class="question">
+                <h2>Question 2</h2>
+                <label for="q2">Tense: Présent <br>Verb: Manger <br>Subject: je</label><br>
+                <input type="text" id="q2" name="q2" value=""><br>
+                <input type="button" value="Check">
+
+                <br><br>
+            </div>
+
+
+
+            <div>
+                <input type="button" value="Return to home page" onclick="window.location.href='index.html'">
+            </div>
+        </form>
+    </div>
   </div>
 </template>
 
