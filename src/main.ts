@@ -4,6 +4,7 @@ import './style.css';
 import App from './App.vue';
 import router from './router/';
 
+App.unmount()
 createApp(App).use(router).mount('#app')
 import { Verb } from './models/Verb.ts';
 
