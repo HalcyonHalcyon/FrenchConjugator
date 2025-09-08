@@ -1,6 +1,15 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { computed } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import { Verb } from './models/Verb'
+
+const tense = ref('')
+const router = useRouter()
+const route = useRoute()
+function pushTense() {
+  router.push({ name: 'Quiz', query: { tense: tense.value } })
+}
 
 </script>
 
@@ -11,7 +20,7 @@ import { Verb } from './models/Verb'
     <h1>French Verb Conjugation Practice</h1>
     <h4>Use the settings below to start a French conjugation practice quiz</h4>
     <label for="tense"><h3>Choose a tense to conjugate: </h3></label>
-    <select name="tense" id="tense">
+    <select vue-model name="tense" id="tense">
       <optgroup label="Indicative - Simple">
         <option value="Présent">Présent</option>
         <option value="Futur Simple">Futur</option>
@@ -37,6 +46,6 @@ import { Verb } from './models/Verb'
     <button type="button" onclick="window.location.href='quiz.vue'">Start Quiz</button>
   </div>-->
     <router-link to="/quiz">
-      <button>Start Quiz</button>
+      <button @click="pushTense">Start Quiz</button>
     </router-link>
 </template>

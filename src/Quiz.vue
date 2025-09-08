@@ -6,38 +6,42 @@
   </div>
 
   <div class="question-box">
-        <form action="/action_page.php">
-            <div class="question">
-                <h2>Question 1</h2>
-                <label for="q1">Tense: Présent <br>Verb: Manger <br>Subject: je</label><br>
-                <input type="text" id="q1" name="q1" value=""><br>
-                <input type="button" value="Check">
+    <form action="/action_page.php">
+        <div class="question">
+            <h2>Question 1</h2>
+            <label for="q1">Tense: {{ selectedTense }} <br>Verb: Manger <br>Subject: je</label><br>
+            <input type="text" id="q1" name="q1" value=""><br>
+            <input type="button" value="Check">
 
-                <br><br>
+            <br><br>
 
-            </div>
-            <div class="question">
-                <h2>Question 2</h2>
-                <label for="q2">Tense: Présent <br>Verb: Manger <br>Subject: je</label><br>
-                <input type="text" id="q2" name="q2" value=""><br>
-                <input type="button" value="Check">
+        </div>
+        <div class="question">
+            <h2>Question 2</h2>
+            <label for="q2">Tense: {{ selectedTense }} <br>Verb: Manger <br>Subject: je</label><br>
+            <input type="text" id="q2" name="q2" value=""><br>
+            <input type="button" value="Check">
 
-                <br><br>
-            </div>
+            <br><br>
+        </div>
 
-            <div>
-                <!--<input type="button" value="Return to home page" onclick="window.location.href='index.html'">-->
-                    <router-link to="/">
-                        <button>Return to home page</button>
-                    </router-link>
-            </div>
-        </form>
-    </div>
+        <div>
+            <!--<input type="button" value="Return to home page" onclick="window.location.href='index.html'">-->
+                <router-link to="/">
+                    <button>Return to home page</button>
+                </router-link>
+        </div>
+    </form>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
 import { Verb } from './models/Verb'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+const selectedTense = route.query.tense
 
 new Verb('être',false,false,'to be','été'),
 new Verb('avoir',false,false,'to have','eu'),
