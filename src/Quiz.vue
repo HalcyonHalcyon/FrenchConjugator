@@ -27,8 +27,8 @@
 
             <div>
                 <!--<input type="button" value="Return to home page" onclick="window.location.href='index.html'">-->
-                    <router-link to="/home">
-                        <button>Start Quiz</button>
+                    <router-link to="/">
+                        <button>Return to home page</button>
                     </router-link>
             </div>
         </form>
