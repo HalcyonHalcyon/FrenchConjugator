@@ -10,10 +10,10 @@ type Tense =
   | 'subjonctif'
   | 'conditionnel'
   | 'conditionnel passe';
-var infinitive: string;
-var group: string;
+/*var infinitive: string;
+var group: string;*/
 var conjugations: Record<Tense, string[]>;
-type reflexive = boolean;
+/*type reflexive = boolean;
 type regular = boolean;
 var participle: string;
 var stem: string;
@@ -53,15 +53,15 @@ const RESuffixes = {
     'subjonctif': ['e','es','e','ions','iez','ent'],
     'conditionnel': ['rais','rais','rait','rions','riez','raient'],
     'conditionnel passe': ['aurais', 'aurais', 'aurait', 'aurions', 'auriez', 'auraient']
-}
+}*/
 
 export class Verb {
   static allVerbs: Verb[] = [];
-  infinitive: string;
+  public infinitive: string;
   group: string;
   regular: boolean;
   conjugations: Record<Tense, string[]>;
-  reflexive: reflexive;
+  reflexive: boolean;
   participle: string;
   stem: string;
   English: string;
@@ -73,9 +73,10 @@ export class Verb {
     English: string,
     participle: string,
     drmrspvandertramp: boolean = false,
+    
   ) {
     this.infinitive = infinitive;
-    this.group = this.infinitive.slice(-2,0);
+    this.group = this.infinitive.slice(-2);
     this.regular = regular;
     this.reflexive = reflexive;
     this.participle = participle;
@@ -94,18 +95,21 @@ export class Verb {
       'conditionnel': [],
       'conditionnel passe': [],
     };
-    Verb.allVerbs.push(this);
   }
 
-  /*add(verb: Verb) {
-    var newVerb = this.add(verb);
-    return new Verb(infinitive,this.regular,this.reflexive,this.English,this.participle,this.drmrspvandertramp);
-  }*/
-
-  static randomVerb(): Verb | undefined {
+  static addVerb(verb: Verb) {
+    Verb.allVerbs.push(verb);
+    return verb;
+  }
+  
+  static randomVerb() {
     const list = Verb.allVerbs;
     if (list.length === 0) return undefined;
     const index = Math.floor(Math.random() * list.length);
-    return list[index];
+    return this.addVerb(list[index]);
+  }
+
+  static getInfinitive(verb: Verb) {
+    return verb.infinitive;
   }
 }
