@@ -2,10 +2,12 @@ import { createApp } from 'vue';
 import { ref, reactive } from 'vue';
 import './style.css';
 import App from './App.vue';
-import router from './router/';
+import router from './router';
 
-App.unmount()
-createApp(App).use(router).mount('#app')
+//App.unmount()
+const app = createApp(App);
+app.use(router)
+app.mount('#app')
 import { Verb } from './models/Verb.ts';
 
 new Verb('être',false,false,'to be','été'),
@@ -109,7 +111,6 @@ new Verb('écrire',false,false,'to write','écrit'),
 new Verb('défendre',false,false,'to defend','défendu'),
 new Verb('tirer',true,false,'to pull','tiré');
 
-createApp(App).mount('#app');
 
 var verb1 = Verb.randomVerb();
 var verb2 = Verb.randomVerb();
