@@ -1,7 +1,7 @@
 
 
 <template>
-  <div id="app">
+  <div>
     <h1>French Conjugation Practice</h1>
     <router-view></router-view>
   </div>
