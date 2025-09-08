@@ -3,7 +3,7 @@ import Home from '../Home.vue'
 import Quiz from '../Quiz.vue'
 
 const routes = [
-  { path: '/home', component: Home },
+  { path: '/', component: Home },
   { path: '/quiz', component: Quiz },
 ]
 

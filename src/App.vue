@@ -5,7 +5,10 @@ import { Verb } from './models/Verb'
 </script>
 
 <template>
-  <router-view />
+  <div>
+    <h1>French Conjugation Practice</h1>
+    <router-view></router-view>
+  </div>
   <!--<div id="app"></div>
   <div>
     <h1>French Verb Conjugation Practice</h1>
