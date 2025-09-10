@@ -128,7 +128,7 @@ for (index=0;index<numQuestions;index++) {
             <br>
             Subject: {{ subject1 }}
           </label>
-          <br>
+          <br><br>
           <input type="text" id="q1" name="q1" value=""><br>
           <input type="button" value="Check">
           <br><br>
@@ -142,7 +142,7 @@ for (index=0;index<numQuestions;index++) {
             <br>
             Subject: {{ subject2 }}
           </label>
-          <br>
+          <br><br>
           <input type="text" id="q2" name="q2" value=""><br>
           <input type="button" value="Check">
 

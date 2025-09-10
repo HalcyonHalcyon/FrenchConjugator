@@ -8,7 +8,15 @@ const tense = ref('')
 const router = useRouter()
 const route = useRoute()
 function pushTense() {
-  router.push({ name: 'Quiz', query: { tense: tense.value } })
+  //router.push({ name: 'Quiz', params: { tense: tense.value } })
+  
+  router.push({
+    name: 'Quiz',
+    query: {
+      items: tense.value
+    }
+  });
+  
 }
 
 </script>
@@ -20,7 +28,8 @@ function pushTense() {
     <h1>French Verb Conjugation Practice</h1>
     <h4>Use the settings below to start a French conjugation practice quiz</h4>
     <label for="tense"><h3>Choose a tense to conjugate: </h3></label>
-    <select vue-model name="tense" id="tense">
+    <select v-model="tense" name="tense" id="tense" @click="pushTense">
+      console.log("Home: Selected tense is {{ tense }}")
       <optgroup label="Indicative - Simple">
         <option value="Présent">Présent</option>
         <option value="Futur Simple">Futur</option>
@@ -46,6 +55,6 @@ function pushTense() {
     <button type="button" onclick="window.location.href='quiz.vue'">Start Quiz</button>
   </div>-->
     <router-link to="/quiz">
-      <button @click="pushTense">Start Quiz</button>
+      <button>Start Quiz</button>
     </router-link>
 </template>
