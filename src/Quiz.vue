@@ -95,11 +95,6 @@ for (index=0;index<numQuestions;index++) {
 </script>
 
 <template>
-  <!--<div>
-    <p>{{ randomVerb1?.infinitive || "No verb available" }}</p>
-    <button @click="randomVerb1 = Verb.randomVerb()">Get New Verb</button>
-  </div>-->
-
   <div class="question-box">
     <form action="/action_page.php">
         <div class="question">
@@ -131,7 +126,7 @@ for (index=0;index<numQuestions;index++) {
           <br><br>
           <input type="text" id="q1" name="q1" value=""><br>
           <input type="button" value="Check">
-          <br><br>
+          <br>
         </div>
         <div class="question">
           <h2>Question 2</h2>
@@ -142,8 +137,128 @@ for (index=0;index<numQuestions;index++) {
             <br>
             Subject: {{ subject2 }}
           </label>
-          <br><br>
+          <br><br></br>
           <input type="text" id="q2" name="q2" value=""><br>
+          <input type="button" value="Check">
+
+          <br><br>
+        </div>
+        <div class="question">
+          <h2>Question 3</h2>
+          <label for="q3">
+            Tense: {{ selectedTense }}
+            <br>
+            Verb: {{ infinitive3 }}
+            <br>
+            Subject: {{ subject3 }}
+          </label>
+          <br><br></br>
+          <input type="text" id="q3" name="q3" value=""><br>
+          <input type="button" value="Check">
+
+          <br><br>
+        </div>
+        <div class="question">
+          <h2>Question 4</h2>
+          <label for="q4">
+            Tense: {{ selectedTense }}
+            <br>
+            Verb: {{ infinitive4 }}
+            <br>
+            Subject: {{ subject4 }}
+          </label>
+          <br><br></br>
+          <input type="text" id="q4" name="q4" value=""><br>
+          <input type="button" value="Check">
+
+          <br><br>
+        </div>
+        <div class="question">
+          <h2>Question 5</h2>
+          <label for="q5">
+            Tense: {{ selectedTense }}
+            <br>
+            Verb: {{ infinitive5 }}
+            <br>
+            Subject: {{ subject5 }}
+          </label>
+          <br><br></br>
+          <input type="text" id="q5" name="q5" value=""><br>
+          <input type="button" value="Check">
+
+          <br><br>
+        </div>
+        <div class="question">
+          <h2>Question 6</h2>
+          <label for="q6">
+            Tense: {{ selectedTense }}
+            <br>
+            Verb: {{ infinitive6 }}
+            <br>
+            Subject: {{ subject6 }}
+          </label>
+          <br><br></br>
+          <input type="text" id="q6" name="q6" value=""><br>
+          <input type="button" value="Check">
+
+          <br><br>
+        </div>
+        <div class="question">
+          <h2>Question 7</h2>
+          <label for="q7">
+            Tense: {{ selectedTense }}
+            <br>
+            Verb: {{ infinitive7 }}
+            <br>
+            Subject: {{ subject7 }}
+          </label>
+          <br><br></br>
+          <input type="text" id="q7" name="q7" value=""><br>
+          <input type="button" value="Check">
+
+          <br><br>
+        </div>
+        <div class="question">
+          <h2>Question 8</h2>
+          <label for="q8">
+            Tense: {{ selectedTense }}
+            <br>
+            Verb: {{ infinitive8 }}
+            <br>
+            Subject: {{ subject8 }}
+          </label>
+          <br><br></br>
+          <input type="text" id="q8" name="q8" value=""><br>
+          <input type="button" value="Check">
+
+          <br><br>
+        </div>
+        <div class="question">
+          <h2>Question 9</h2>
+          <label for="q9">
+            Tense: {{ selectedTense }}
+            <br>
+            Verb: {{ infinitive9 }}
+            <br>
+            Subject: {{ subject9 }}
+          </label>
+          <br><br></br>
+          <input type="text" id="q9" name="q9" value=""><br>
+          <input type="button" value="Check">
+
+          <br><br>
+        </div>
+        <div class="question">
+          <h2>Question 10</h2>
+          <label for="q10">
+            Tense: {{ selectedTense }}
+            <br>
+            Verb: {{ infinitive10 }}
+            <br>
+            Subject: {{ subject10 }}
+          </label>
+          <br><br></br>
+          <input type="text" id="q10" name="q10" value=""><br>
           <input type="button" value="Check">
 
           <br><br>

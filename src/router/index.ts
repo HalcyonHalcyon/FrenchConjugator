@@ -4,8 +4,8 @@ import Home from '../Home.vue'
 import Quiz from '../Quiz.vue'
 
 const routes = [
-  { path: '/', component: Home },
-  { path: '/quiz', component: Quiz }
+  { path: '/', component: Home, name: 'Home' },
+  { path: '/quiz', component: Quiz, name: 'Quiz' }
 ]
 
 const router = createRouter({
