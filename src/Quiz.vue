@@ -7,9 +7,9 @@ import { isQuestionDotToken } from 'typescript';
 
 VerbList.loadVerbs();
 
-const route = useRoute()
-const selectedTense = route.query.tense
-console.log("Selected tense is:",selectedTense)
+const route = useRoute();
+const selectedTense = route.query.tense;
+const numQuestions = Number(route.query.numQuestions) || 10;
 
 const subject: string[] = ["je", "tu", "il", "nous", "vous", "ils"]
 var index:number;
@@ -22,7 +22,7 @@ function conjugateSetup(): String {
   const infinitive = ref<string>('');
   const randomVerb = Verb.randomVerb();
   if (randomVerb) {
-    infinitive.value = randomVerb.infinitive
+    infinitive.value = randomVerb.infinitive;
   } else {
     infinitive.value = '';
   }
@@ -30,9 +30,14 @@ function conjugateSetup(): String {
   return infinitive.value,subject;
 }
 
-const numQuestions = 10;
+var infinitiveList: string[] = Array(numQuestions).fill('');
+var subjectList: string[] = Array(numQuestions).fill('');
+for (let index=0;index<numQuestions;index++) {
+  infinitiveList[index],subject[index] = String(conjugateSetup());
+}
+//console.log("infinitiveList is:",infinitiveList);
 
-
+//document.getElementById("demo").innerHTML = "<h2>Hello World</h2>";
 
 const infinitive1 = ref<string>('');
 const infinitive2 = ref<string>('');
@@ -88,9 +93,9 @@ var subject9:String = randomSubject();
 var subject10:String = randomSubject();
 var randomisedVerbs: any[] = Array(numQuestions).fill("");
 
-for (index=0;index<numQuestions;index++) {
-  randomisedVerbs[index] = Verb.randomVerb();
-}
+//for (index=0;index<numQuestions;index++) {
+ // randomisedVerbs[index] = Verb.randomVerb();
+//}
 
 </script>
 
@@ -115,6 +120,20 @@ for (index=0;index<numQuestions;index++) {
             </label>
             <br />
           </div>-->
+          <!--<div v-for = "index in numQuestions">
+            <h2>Question {index+1}</h2>
+            <label for="question">
+              Tense: {{ selectedTense }}
+              <br></br>
+              Verb: {{ infinitiveList[index] }}
+              <br></br>
+              Subject: {{ subjectList[index] }}
+            </label>
+            <input type="text" id="question" name="question"><br></br></input>
+            <input type="button" value="Check"></input>
+          </div>
+        </div>-->
+
           <h2>Question 1</h2>
           <label for="q1">
             Tense: {{ selectedTense }}
@@ -138,7 +157,7 @@ for (index=0;index<numQuestions;index++) {
             Subject: {{ subject2 }}
           </label>
           <br><br></br>
-          <input type="text" id="q2" name="q2" value=""><br>
+          <input type="text" id="q2" name="q2"><br>
           <input type="button" value="Check">
 
           <br><br>
