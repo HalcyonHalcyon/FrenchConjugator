@@ -2,7 +2,7 @@
 
 I made this as a personal project;
 I'd been looking for a website to practice my French verb conjugations but couldn't find any sites that worked for me, so I made my own.
-Verb conjugations taken from <a href="reverso.net">Reverso</a> and <a href="wordreference.com">WordReference</a>
+Verb conjugations taken from <a href="[reverso.net](https://www.reverso.net/vocabulary)">Reverso</a> and <a href="[wordreference.com](https://www.wordreference.com/conj/frverbs.aspx)"></a>
 
 # Attributes
 
