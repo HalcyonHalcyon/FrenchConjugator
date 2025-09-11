@@ -10,6 +10,16 @@ VerbList.loadVerbs();
 const route = useRoute();
 const selectedTense = route.query.tense;
 const numQuestions = Number(route.query.numQuestions) || 10;
+const ansQ1 = ref(false);
+const ansQ2 = ref(false);
+const ansQ3 = ref(false);
+const ansQ4 = ref(false);
+const ansQ5 = ref(false);
+const ansQ6 = ref(false);
+const ansQ7 = ref(false);
+const ansQ8 = ref(false);
+const ansQ9 = ref(false);
+const ansQ10 = ref(false);
 
 const subject: string[] = ["je", "tu", "il", "nous", "vous", "ils"]
 var index:number;
@@ -144,8 +154,11 @@ var randomisedVerbs: any[] = Array(numQuestions).fill("");
           </label>
           <br><br>
           <input type="text" id="q1" name="q1" value=""><br>
-          <input type="button" value="Check">
-          <br>
+          <input type="button" value="Check" @click="ansQ1 = !ansQ1">
+        </div>
+        <div v-if="ansQ1">
+          <div class="box">Correct answer is: </div>
+    
         </div>
         <div class="question">
           <h2>Question 2</h2>
