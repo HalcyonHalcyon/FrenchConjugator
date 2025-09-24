@@ -8,9 +8,7 @@ const tense = ref('présent')
 const numQuestions = ref('10')
 const router = useRouter()
 const route = useRoute()
-function pushTense() {
-  //router.push({ name: 'Quiz', params: { tense: tense.value } })
-  
+function pushTense() {  
   router.push({
     name: 'Quiz',
     query: {
@@ -18,7 +16,6 @@ function pushTense() {
       numQuestions: numQuestions.value || 10
     }
   });
-  
 }
 
 </script>
@@ -48,16 +45,23 @@ function pushTense() {
         <option value="conditionnel passé">Conditionnel passé</option>
       </optgroup>
     </select>
+    <!--For selecting number of questions-->
     <!--<label for="numQuestions"><h3>Choose the number of verbs to conjugate: </h3></label>
     <input type="number" id="numQuestions" name="numQuestions" value="10" min="1" max="50" v-model="numQuestions">-->
   </div>
   <div></div>
   <br>
-  <!--<div>
-    <button type="button" onclick="window.location.href='quiz.vue'">Start Quiz</button>
-  </div>-->
-    <!--<router-link to="/quiz">
-      <button>Start Quiz</button>
-    </router-link>-->
     <button @click="pushTense">Start Quiz</button>
 </template>
+
+<style scoped>
+#tense {
+  height: 25px;
+  width: 180px;
+  margin: 0 auto;
+  border-radius: 6px;
+  text-align: left;
+  padding: 5px;
+}
+
+</style>

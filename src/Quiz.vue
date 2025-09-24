@@ -3,10 +3,10 @@ import { ref } from 'vue'
 import { Verb } from './models/Verb'
 import { useRoute } from 'vue-router'
 import * as VerbList from './data/VerbList.ts';
-import { isQuestionDotToken } from 'typescript';
 
 VerbList.loadVerbs();
 
+const showq1 = ref(false);
 const route = useRoute();
 const selectedTense = route.query.tense;
 const numQuestions = Number(route.query.numQuestions) || 10;
@@ -102,6 +102,7 @@ var subject8:String = randomSubject();
 var subject9:String = randomSubject();
 var subject10:String = randomSubject();
 var randomisedVerbs: any[] = Array(numQuestions).fill("");
+var q1Check:boolean = false;
 
 //for (index=0;index<numQuestions;index++) {
  // randomisedVerbs[index] = Verb.randomVerb();
@@ -152,13 +153,14 @@ var randomisedVerbs: any[] = Array(numQuestions).fill("");
             <br>
             Subject: {{ subject1 }}
           </label>
-          <br><br>
+          <br>
           <input type="text" id="q1" name="q1" value=""><br>
           <input type="button" value="Check" @click="ansQ1 = !ansQ1">
         </div>
-        <div v-if="ansQ1">
-          <div class="box">Correct answer is: </div>
-    
+        <div v-if="showq1 && ansQ1">
+          <div class="green-box">Correct!</div>
+        v-else-if "showq1">
+          <div class="red-box">Correct answer is: </div>
         </div>
         <div class="question">
           <h2>Question 2</h2>
@@ -169,7 +171,7 @@ var randomisedVerbs: any[] = Array(numQuestions).fill("");
             <br>
             Subject: {{ subject2 }}
           </label>
-          <br><br></br>
+          <br>
           <input type="text" id="q2" name="q2"><br>
           <input type="button" value="Check">
 
@@ -178,7 +180,7 @@ var randomisedVerbs: any[] = Array(numQuestions).fill("");
         <!--Add rest of questions here-->
         <div>
           <router-link to="/">
-              <button>Return to home page</button>
+            <button>Return to home page</button>
           </router-link>
         
         </div>
@@ -202,5 +204,35 @@ h1 {
 .break {
   flex-basis: 100%;
   height: 0;
+}
+
+.green-box {
+  width: 400px;
+  height: 50px;
+  background-color: rgb(207, 253, 207);
+  border: none;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.red-box {
+  width: 400px;
+  height: 50px;
+  background-color: rgb(255, 142, 142);
+  border: none;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.question {
+  margin: 0 auto;
+}
+
+.button {
+  margin: 0 auto;
 }
 </style>
